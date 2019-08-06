@@ -26,11 +26,9 @@ export const getHash = function () {
  * @param {*} params 
  */
 export const getUrl = function (params = {}) {
-    let _params = getParams();
     let query = '';
-    const newParams = Object.assign(_params,params);
-    Object.keys(newParams).forEach(function (key) {
-        query += key + '=' + newParams[key] + '&';
+    Object.keys(params).forEach(function (key) {
+        query += key + '=' + params[key] + '&';
 
     });
     if (query.length > 0) {

@@ -1,40 +1,8 @@
 /**
- * helper-js v0.0.3
+ * helper-js v0.0.4
  * https://github.com/defypro/helper-js
  * @license MIT
  */
-function _typeof(obj) {
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    _typeof = function (obj) {
-      return typeof obj;
-    };
-  } else {
-    _typeof = function (obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
-
-  return _typeof(obj);
-}
-
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
 /**
  * 返回URL参数对象
  */
@@ -67,15 +35,9 @@ var getHash = function getHash() {
 
 var getUrl = function getUrl(params) {
   if (params === void 0) params = {};
-
-  var _params = getParams();
-
   var query = '';
-
-  var newParams = _extends(_params, params);
-
-  Object.keys(newParams).forEach(function (key) {
-    query += key + '=' + newParams[key] + '&';
+  Object.keys(params).forEach(function (key) {
+    query += key + '=' + params[key] + '&';
   });
 
   if (query.length > 0) {
@@ -89,6 +51,20 @@ var url = {
   getHash: getHash,
   getUrl: getUrl
 };
+
+function _typeof(obj) {
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof = function (obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof = function (obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
 
 var u = navigator.userAgent;
 var isAndroid = function isAndroid() {
