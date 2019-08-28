@@ -44,7 +44,6 @@ export const mobileInit = function () {
                 window.scrollTo(0, document.documentElement.scrollTop || document.body.scrollTop);
             }, 100);
         });
-        window.document.body.style.setProperty('-webkit-text-size-adjust', '100%', 'important');
     }
 
     let bodyHeight = window.document.body.offsetHeight;

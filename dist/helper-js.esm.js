@@ -1,5 +1,5 @@
 /**
- * helper-js v0.0.4
+ * helper-js v0.0.6
  * https://github.com/defypro/helper-js
  * @license MIT
  */
@@ -113,7 +113,6 @@ var mobileInit = function mobileInit() {
         window.scrollTo(0, document.documentElement.scrollTop || document.body.scrollTop);
       }, 100);
     });
-    window.document.body.style.setProperty('-webkit-text-size-adjust', '100%', 'important');
   }
 
   var bodyHeight = window.document.body.offsetHeight;
