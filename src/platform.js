@@ -54,7 +54,7 @@ export const mobileInit = function () {
         }
     }, 100);
     window.onresize = function () {
-        if(window.history && window.history.length > 1){
+        if(window.history && window.history.length > 1 && isIOS() && isWeiXin()){
             bodyHeight -= 49;
         }
         if ((bodyHeight - window.document.body.offsetHeight) > 49)
