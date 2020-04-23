@@ -1,6 +1,6 @@
 {
   "name": "@defy/helper-js",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
   "main": "dist/helper-js.common.js",
   "module": "dist/helper-js.esm.js",

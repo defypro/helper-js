@@ -1,5 +1,5 @@
 /**
- * helper-js v0.0.6
+ * helper-js v0.0.7
  * https://github.com/defypro/helper-js
  * @license MIT
  */
@@ -125,7 +125,7 @@ var mobileInit = function mobileInit() {
   }, 100);
 
   window.onresize = function () {
-    if (window.history && window.history.length > 1) {
+    if (window.history && window.history.length > 1 && isIOS() && isWeiXin()) {
       bodyHeight -= 49;
     }
 
